@@ -17,10 +17,9 @@ app.add_middleware(
 )
 
 # Load model and pipeline
-BASE_DIR = os.path.dirname(os.path.dirname(__file__))
-
-MODEL_PATH = os.path.join(BASE_DIR, "student-performance", "model.pkl")
-PIPELINE_PATH = os.path.join(BASE_DIR, "student-performance", "pipeline.pkl")
+BASE_DIR = os.path.dirname(__file__)
+MODEL_PATH = os.path.join(BASE_DIR, "model.pkl")
+PIPELINE_PATH = os.path.join(BASE_DIR, "pipeline.pkl")
 
 try:
     model = joblib.load(MODEL_PATH)
